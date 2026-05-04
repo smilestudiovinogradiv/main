@@ -97,6 +97,17 @@ body:not(.category-page) #hero .hero-inner {
   padding-bottom: 20px;
 }
 
+body:not(.category-page) #hero .hero-media img,
+body:not(.category-page) #hero.hero-premium::before,
+body:not(.category-page) #hero.hero-premium::after {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none !important;
+  scale: 1 !important;
+  transition: none !important;
+}
+
 .container {
   width: min(1180px, calc(100% - 40px));
   margin-left: auto;
