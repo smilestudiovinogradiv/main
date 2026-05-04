@@ -77,6 +77,15 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- Replace G-XXXXXXXXXX with real Google Analytics Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-182BC4WJQH');
+    </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="category-page">
@@ -117,6 +126,7 @@
             src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=1800&q=80"
             alt="Малювання для дітей у Smile Studio у Виноградові"
             decoding="async"
+            fetchpriority="high"
           />
         </div>
         <div class="hero-overlay"></div>
