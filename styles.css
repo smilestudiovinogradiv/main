@@ -22,6 +22,11 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+[id] {
+  scroll-margin-top: 88px;
 }
 
 body {
@@ -164,12 +169,6 @@ p {
   font-weight: 600;
 }
 
-.logo img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-}
-
 .nav-toggle {
   justify-self: end;
   display: inline-flex;
@@ -192,7 +191,7 @@ p {
   margin: 0 auto;
   border-radius: 999px;
   background: #f2d04f;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.22s ease, opacity 0.22s ease;
 }
 
 .site-nav {
@@ -210,7 +209,7 @@ p {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-8px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: opacity 0.22s ease, transform 0.22s ease;
 }
 
 .site-nav a,
@@ -253,7 +252,7 @@ p {
 }
 
 .menu-open .nav-toggle span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 
 .menu-open .nav-toggle span:nth-child(2) {
@@ -261,7 +260,7 @@ p {
 }
 
 .menu-open .nav-toggle span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .hero-premium {
@@ -1532,6 +1531,51 @@ main > section:first-child {
   #cta,
   #contacts {
     scroll-margin-top: calc(var(--header-height) + 24px);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  [id] {
+    scroll-margin-top: 76px;
+  }
+
+  .glass-card,
+  .contact-card,
+  .detail-card,
+  .cta-card,
+  .premium-cta-card,
+  .contact-card-main,
+  .contact-card-side {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .cta-glow,
+  .premium-cta-card::before,
+  .premium-cta-card::after,
+  .about-brand::before,
+  .about-brand::after,
+  .contact-card-main::before,
+  .contact-card-main::after,
+  .contact-card-side::before,
+  .contact-card-side::after,
+  .audience-shell::after,
+  .detail-card.glass-card::before {
+    display: none;
+  }
+
+  .nav-toggle,
+  .site-nav,
+  .gallery-item,
+  .detail-card,
+  .contact-card,
+  .premium-cta-card,
+  .cta-card {
+    box-shadow: var(--shadow-soft);
   }
 }
 
