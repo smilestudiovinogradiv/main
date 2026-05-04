@@ -373,27 +373,20 @@ p {
   backdrop-filter: blur(8px);
 }
 
-.about-premium,
 .contact-premium,
 .contact-premium-grid,
 .contact-list,
 .footer-inner,
-.card-grid,
 .feature-grid,
 .gallery-grid,
-.hero-grid,
-.contact-grid,
 .detail-grid,
 .cta-banner {
   display: grid;
 }
 
-.about-premium,
 .contact-premium,
-.card-grid,
 .feature-grid,
 .gallery-grid,
-.contact-grid,
 .detail-grid,
 .cta-banner {
   gap: 1rem;
@@ -405,8 +398,6 @@ p {
 }
 
 .direction-card-media,
-.gallery-premium-main,
-.gallery-premium-small,
 .gallery-item {
   overflow: hidden;
   border-radius: var(--radius-xl);
@@ -539,8 +530,6 @@ p {
 
 .contact-list a,
 .contact-list p,
-.hero-panel,
-.info-card,
 .feature-card,
 .detail-card,
 .map-frame {
@@ -809,10 +798,9 @@ p {
   border: 0;
 }
 
-.info-card,
 .feature-card,
 .detail-card,
-.hero-panel {
+.detail-card {
   padding: 1.5rem;
 }
 
@@ -831,7 +819,6 @@ p {
 }
 
 .cta-premium .container,
-.signup-section .container,
 .container.cta-banner {
   width: min(1180px, calc(100% - 40px));
   margin-left: auto;
@@ -1191,9 +1178,6 @@ main > section:first-child {
 @media (min-width: 700px) {
   .about-brand,
   .contact-premium-grid,
-  .gallery-premium,
-  .hero-grid,
-  .contact-grid,
   .detail-grid,
   .cta-banner,
   .cta-premium {
@@ -1212,10 +1196,6 @@ main > section:first-child {
 
   .about-benefits {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .feature-grid {
@@ -1241,21 +1221,18 @@ main > section:first-child {
     padding: 14px 14px;
   }
 
-  .cta-premium,
-  .signup-section {
+  .cta-premium {
     padding-left: 12px;
     padding-right: 12px;
   }
 
   .cta-premium .container,
-  .signup-section .container,
   .container.cta-banner {
     width: calc(100% - 24px);
   }
 
   .category-page .detail-card,
   .category-page .glass-card,
-  .category-page .hero-panel,
   .category-page .hero-copy {
     width: 100%;
     margin-left: 0;
@@ -1298,8 +1275,7 @@ main > section:first-child {
     padding-bottom: 1.25rem;
   }
 
-  .hero-copy,
-  .hero-content {
+  .hero-copy {
     display: flex;
     flex-direction: column;
     margin-top: auto;
@@ -1382,7 +1358,6 @@ main > section:first-child {
     padding-bottom: 18px;
   }
 
-  .contacts-section,
   #contacts {
     padding-bottom: 32px;
   }
@@ -1514,11 +1489,6 @@ main > section:first-child {
   .header-cta {
     display: inline-flex;
   }
-
-  .five-up {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
   .contact-premium-grid {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
@@ -1547,11 +1517,17 @@ main > section:first-child {
   .contact-card,
   .detail-card,
   .cta-card,
+  .cta-banner,
   .premium-cta-card,
+  .audience-shell,
+  .facts-shell,
+  .audience-item,
+  .fact-card,
   .contact-card-main,
   .contact-card-side {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: 0 8px 22px rgba(23, 23, 23, 0.07) !important;
   }
 
   .cta-glow,
@@ -1565,17 +1541,33 @@ main > section:first-child {
   .contact-card-side::after,
   .audience-shell::after,
   .detail-card.glass-card::before {
-    display: none;
+    display: none !important;
   }
 
-  .nav-toggle,
-  .site-nav,
-  .gallery-item,
-  .detail-card,
+  .glass-card,
   .contact-card,
+  .detail-card,
+  .cta-card,
+  .cta-banner,
   .premium-cta-card,
-  .cta-card {
-    box-shadow: var(--shadow-soft);
+  .audience-shell,
+  .facts-shell,
+  .audience-item,
+  .fact-card,
+  .feature-card,
+  .direction-card,
+  .gallery-item,
+  .hero-media img {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .hero-media img {
+    filter: none;
+  }
+
+  * {
+    will-change: auto !important;
   }
 }
 
@@ -1592,7 +1584,6 @@ main > section:first-child {
 }
 
 .audience-list,
-.facts-list,
 .facts-grid {
   margin-top: 8px !important;
   gap: 12px;
