@@ -75,8 +75,8 @@ body:not(.category-page) main {
 }
 
 body:not(.category-page) #hero.hero-premium {
-  min-height: 100svh;
-  height: 100svh;
+  min-height: var(--home-hero-height, 100svh);
+  height: var(--home-hero-height, 100svh);
   margin-top: 0;
   padding-top: 0;
 }
