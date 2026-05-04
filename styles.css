@@ -1597,6 +1597,22 @@ p {
   align-items: stretch;
 }
 
+body.home-page .hero-premium,
+body.home-page .hero-premium *,
+body.home-page .hero-premium::before,
+body.home-page .hero-premium::after {
+  transform: none !important;
+  scale: 1 !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+body.home-page .hero-premium {
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: scroll !important;
+}
+
 .category-overview .audience-shell,
 .category-overview .facts-shell {
   padding-top: 20px !important;
