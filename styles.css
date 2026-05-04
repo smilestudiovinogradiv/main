@@ -66,46 +66,9 @@ main {
   padding-top: 0;
 }
 
-body.category-page main {
+body.category-page main,
+body.home-page main {
   padding-top: var(--header-height);
-}
-
-body:not(.category-page) main {
-  padding-top: 0;
-}
-
-body:not(.category-page) #hero.hero-premium {
-  min-height: var(--home-hero-height, 100svh);
-  height: var(--home-hero-height, 100svh);
-  margin-top: 0;
-  padding-top: 0;
-}
-
-body:not(.category-page) #hero > .container {
-  position: relative;
-  z-index: 1;
-  min-height: 100%;
-  height: 100%;
-  display: flex;
-}
-
-body:not(.category-page) #hero .hero-inner {
-  min-height: 100%;
-  height: 100%;
-  width: 100%;
-  padding-top: var(--header-height);
-  padding-bottom: 20px;
-}
-
-body:not(.category-page) #hero .hero-media img,
-body:not(.category-page) #hero.hero-premium::before,
-body:not(.category-page) #hero.hero-premium::after {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: none !important;
-  scale: 1 !important;
-  transition: none !important;
 }
 
 .container {
@@ -1595,22 +1558,6 @@ p {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   align-items: stretch;
-}
-
-body.home-page .hero-premium,
-body.home-page .hero-premium *,
-body.home-page .hero-premium::before,
-body.home-page .hero-premium::after {
-  transform: none !important;
-  scale: 1 !important;
-  animation: none !important;
-  transition: none !important;
-}
-
-body.home-page .hero-premium {
-  background-size: cover !important;
-  background-position: center !important;
-  background-attachment: scroll !important;
 }
 
 .category-overview .audience-shell,
