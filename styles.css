@@ -345,6 +345,34 @@ p {
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
+body.home-page .hero-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.68) 0%,
+      rgba(0, 0, 0, 0.48) 36%,
+      rgba(0, 0, 0, 0.18) 68%,
+      rgba(0, 0, 0, 0.08) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(0, 0, 0, 0.18) 45%,
+      rgba(0, 0, 0, 0.58) 100%
+    );
+}
+
+body.home-page .hero-copy h1,
+body.home-page .hero-description,
+body.home-page .eyebrow {
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+body.home-page .hero-copy .eyebrow {
+  color: #f2d04f;
+  font-weight: 900;
+}
+
 .hero-actions {
   display: flex;
   gap: 14px;
